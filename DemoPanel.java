@@ -13,6 +13,9 @@ public class DemoPanel extends JPanel {
 
 
     Node[][] grid = new Node[maxRow][maxCol];
+    Node startNode;
+    Node goalNode; 
+    Node currentNode;
 
     public DemoPanel() {
            
@@ -27,7 +30,19 @@ public class DemoPanel extends JPanel {
             }
         }
 
+    
+
+        setStartNode(2, 3);
+        setGoalNode(7, 10);
+    }
+    private void setStartNode(int row, int col) {
+        startNode = grid[row][col];
+        startNode.setAsStart();
+        currentNode = startNode;
     }
 
-    
+    private void setGoalNode(int row, int col) {
+        goalNode = grid[row][col];
+        goalNode.setAsGoal();
+    }
 }
