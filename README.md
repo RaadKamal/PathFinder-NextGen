@@ -1,4 +1,4 @@
-Because Dijkstra's is perfectly accurate but slow, and Greedy BFS is fast but inaccurate, computer scientists combined them to create A (A-Star) Search*. A* calculates both the actual cost from the start ($g(n)$) and the estimated cost to the goal ($h(n)$) to efficiently find the guaranteed shortest path.
+Because Dijkstra's is perfectly accurate but slow, and Greedy BFS is fast but inaccurate, computer scientists combined them to create A (A-Star) Search*. A* calculates both the actual cost from the start g(n) and the estimated cost to the goal h(n) to efficiently find the guaranteed shortest path.
 
 
 https://theory.stanford.edu/~amitp/GameProgramming/AStarComparison.html
@@ -8,3 +8,11 @@ f(n) = g(n) + h(n).
 
 In the standard terminology used when talking about A*:
 g(n) represents the exact cost of the path from the starting point to any vertex n, and h(n) represents the heuristic estimated cost from vertex n to the goal. 
+
+Primary Real-World Applications:
+
+Video games: A* is the engine running behind a unit moving around in a jungle filled with trees and evading enemies, or an enemy character chasing the player through a complex building.
+
+GPS and Navigation: While massive apps like Google Maps use complex, highly optimised variations of these algorithms to handle the entire globe, the core concepts of A* are used to find the fastest route between two locations while factoring in avoiding roadblocks.
+
+Robotics: Autonomous machines ( like automated warehouse robots or robotic vacuums ) use A* to plot a physical path across a factory floor or a living room without crashing into walls or unexpected obstacles.
