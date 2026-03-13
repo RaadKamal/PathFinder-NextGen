@@ -2,7 +2,6 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.util.ArrayList;
-
 import javax.swing.JPanel;
 
 public class DemoPanel extends JPanel {
@@ -70,7 +69,7 @@ public class DemoPanel extends JPanel {
         int row = 0;
 
         while(col < maxCol && row < maxRow) {
-            getCost(node[col][row]);
+            getCost(node[row][col]);
             col++;
             if(col == maxCol) {
                 col = 0;
@@ -110,24 +109,37 @@ public class DemoPanel extends JPanel {
         
             //OPEN THE NODES AROUND THE CURRENT NODE
             if(row-1>=0){
-                openNode(node[col][row-1]);
+                openNode(node[row-1][col]);
             }
             if(row+1<maxRow) {
-                openNode(node[col][row+1]);
+                openNode(node[row+1][col]);
             }
             if(col-1>=0) {
-                openNode(node[col-1][row]);
+                openNode(node[row][col-1]);
             }
             if(col+1<maxCol) {
-                openNode(node[col+1][row]);    
+                openNode(node[row][col+1]);    
             }
             int bestNodeIndex = 0;
             int bestNodefCost = Integer.MAX_VALUE;
-
+            
+            
+            //We are checking if this node's  cost is better than the best node's cost, if it is, we set this node as the best node.
             for(int i = 0; i < openList.size(); i++) {
                 if(openList.get(i).fCost < bestNodefCost) {
                     bestNodeIndex = i;
                     bestNodefCost = openList.get(i).fCost;
+                }
+                else if(openList.get(i).fCost == bestNodefCost) {
+                    if(openList.get(i).gCost < openList.get(bestNodeIndex).gCost) {
+                        bestNodeIndex = i;
+                    }
+                }
+            }
+            currentNode=openList.get(bestNodeIndex);
+
+            if(currentNode == goalNode) {
+                goalreached = true;
                 }
             }
         }
@@ -139,6 +151,7 @@ public class DemoPanel extends JPanel {
             node.setAsOpen();
             node.parent=currentNode;
             openList.add(node);
+            
         }
     }
-}
+
