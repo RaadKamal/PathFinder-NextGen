@@ -35,6 +35,7 @@ public class DemoPanel extends JPanel {
                 this.add(node[row][col]);
             }
         }
+    
 
     
 
@@ -50,6 +51,7 @@ public class DemoPanel extends JPanel {
         setCostonNodes();
 
     }
+
     private void setStartNode(int row, int col) {
         startNode = node[row][col];
         startNode.setAsStart();
@@ -95,7 +97,7 @@ public class DemoPanel extends JPanel {
         }
     }
 
-    public void search(){
+    private void search(){
         
       
      if(goalreached == false) {  
@@ -144,8 +146,8 @@ public class DemoPanel extends JPanel {
             }
         }
     
-    }
-    public void openNode(Node node) {
+    
+    private void openNode(Node node) {
         if(node.open == false && node.checked == false && node.solid == false) {
             //if the node is not opened yet, add it to the open list
             node.setAsOpen();
@@ -154,4 +156,5 @@ public class DemoPanel extends JPanel {
             
         }
     }
+}
 
