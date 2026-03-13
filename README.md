@@ -1,13 +1,16 @@
-Because Dijkstra's is perfectly accurate but slow, and Greedy BFS is fast but inaccurate, computer scientists combined them to create A (A-Star) Search*. A* calculates both the actual cost from the start g(n) and the estimated cost to the goal h(n) to efficiently find the guaranteed shortest path.
-
 
 https://theory.stanford.edu/~amitp/GameProgramming/AStarComparison.html
 
 ## Formula:
 f(n) = g(n) + h(n).
 
-In the standard terminology used when talking about A*:
-g(n) represents the exact cost of the path from the starting point to any vertex n, and h(n) represents the heuristic estimated cost from vertex n to the goal. 
+Each time through the main loop, it examines the vertex n that has the lowest f(n) = g(n) + h(n).
+
+$g(n)$ (The known past): This acts like Dijkstra's Algorithm. It keeps the algorithm grounded in reality by tracking the actual cost already spent, ensuring you don't commit to a path that has already become too expensive.
+
+$h(n)$ (The estimated future): This acts like Greedy Best-First Search. It provides a "best guess" that actively pulls the search direction toward the goal, rather than just expanding blindly in a circle.
+
+what is $f(n)?$ The best Breadth First Search!
 
 ## Primary Real-World Applications:
 
