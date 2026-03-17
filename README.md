@@ -8,7 +8,7 @@ Each time through the main loop, it examines the vertex n that has the lowest f(
 
 $g(n)$ (The known past): This acts like Dijkstra's Algorithm. It keeps the algorithm grounded in reality by tracking the actual cost already spent, ensuring you don't commit to a path that has already become too expensive.
 
-**If h(n) is exactly equal to the cost of moving from n to the goal, then A* will only follow the best path and never expand anything else, making it very fast. Although you can’t make this happen in all cases, you can make it exact in some special cases. It’s nice to know that given perfect information, A* will behave perfectly**
+** If h(n) is exactly equal to the cost of moving from n to the goal, then A* will only follow the best path and never expand anything else, making it very fast. Although you can’t make this happen in all cases, you can make it exact in some special cases. It’s nice to know that given perfect information, A* will behave perfectly **
 
 $h(n)$ (The estimated future): This acts like Greedy Best-First Search. It provides a "best guess" that actively pulls the search direction toward the goal, rather than just expanding blindly in a circle.
 
