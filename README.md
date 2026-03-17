@@ -4,7 +4,7 @@ https://theory.stanford.edu/~amitp/GameProgramming/AStarComparison.html
 ## Formula:
 f(n) = g(n) + h(n).
 
-Each time through the main loop, it examines the vertex n that has the lowest f(n) = g(n) + h(n). It is heuristic in it's nature
+Each time through the main loop, it examines the vertex n that has the lowest f(n) = g(n) + h(n). It is heuristic in its nature.
 
 $g(n)$ (The known past): This acts like Dijkstra's Algorithm. It keeps the algorithm grounded in reality by tracking the actual cost already spent, ensuring you don't commit to a path that has already become too expensive.
 
