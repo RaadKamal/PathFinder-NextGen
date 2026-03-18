@@ -43,7 +43,7 @@ public class DemoPanel extends JPanel {
     
 
         setStartNode(2, 3);
-        setGoalNode(7, 10);
+        setGoalNode(maxRow-1, maxCol-1);
         setSolidNode(4, 5);
         setSolidNode(4, 6);
         setSolidNode(4, 7);
