@@ -11,4 +11,4 @@ __If h(n) is exactly equal to the cost of moving from n to the goal, then A* wil
 * Video games, GPS and Navigation, Robotics.
 
 
-That's what A* capability. NextGen starts from here:- The rest of the algorithm is being developed in a private mode.
+That's what A* capability. NextGen starts from here:- The rest of the algorithm is being developed in private mode.
