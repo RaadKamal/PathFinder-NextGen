@@ -22,6 +22,7 @@ public class DemoPanel extends JPanel {
 
     //OTHERS
     boolean goalreached = false;
+    int step = 0;
 
     public DemoPanel() {
            
@@ -99,10 +100,10 @@ public class DemoPanel extends JPanel {
         }
     }
 
-    public void search(){
+    public void autosearch(){
         
       
-     if(goalreached == false) {  
+     if(goalreached == false && step <300) {  
         int col = currentNode.col;
         int row = currentNode.row;
 
@@ -144,8 +145,10 @@ public class DemoPanel extends JPanel {
 
             if(currentNode == goalNode) {
                 goalreached = true;
+                trackThePath();
                 }
             }
+            step++;
         }
     
     
@@ -156,6 +159,17 @@ public class DemoPanel extends JPanel {
             node.parent=currentNode;
             openList.add(node);
             
+        }
+    }
+
+    private void trackThePath() {
+        Node current = goalNode;
+        while(current != startNode) {
+            current = current.parent;
+
+            if(current != startNode) {
+                current.setAsPath();
+            }
         }
     }
 }

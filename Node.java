@@ -30,7 +30,7 @@ public class Node extends JButton implements ActionListener {
 
     public void setAsStart() {
         start = true;
-        setBackground(Color.green);
+        setBackground(Color.red);
         setForeground(Color.white);
         setText("Start");
     }
@@ -38,7 +38,7 @@ public class Node extends JButton implements ActionListener {
     public void setAsGoal() {
         goal = true;
         setBackground(Color.blue);
-        setForeground(Color.black);
+        setForeground(Color.white);
         setText("Goal");
     }
 
@@ -65,7 +65,7 @@ public class Node extends JButton implements ActionListener {
     public void setAsPath() {
   
             setBackground(Color.green);
-            setForeground(Color.black);
+            setForeground(Color.white);
             
         }
     

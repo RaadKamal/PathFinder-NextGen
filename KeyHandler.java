@@ -20,7 +20,8 @@ public class KeyHandler implements KeyListener {
         int code = e.getExtendedKeyCode();
 
         if(code == KeyEvent.VK_ENTER) {
-           dp.search();
+        //   dp.search();
+        dp.autosearch();
         }
     }
 
