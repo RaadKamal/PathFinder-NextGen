@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import javax.swing.JPanel;
 
 public class DemoPanel extends JPanel {
-  //SCREEN SETTINGS
+    //SCREEN SETTINGS
     final int maxCol = 15;
     final int maxRow = 10;
     final int nodeSize = 70;
@@ -25,7 +25,6 @@ public class DemoPanel extends JPanel {
     int step = 0;
 
     public DemoPanel() {
-           
         this.setPreferredSize(new Dimension(screenWidth,screenHeight));
         this.setBackground(Color.black);
         this.setLayout(new GridLayout(maxRow,maxCol));
@@ -101,9 +100,10 @@ public class DemoPanel extends JPanel {
     }
 
     public void autosearch(){
-        
-      
-     if(goalreached == false && step <300) {  
+
+
+    if(goalreached == false && step <300) {  
+
         int col = currentNode.col;
         int row = currentNode.row;
 
@@ -141,6 +141,7 @@ public class DemoPanel extends JPanel {
                     }
                 }
             }
+            
             currentNode=openList.get(bestNodeIndex);
 
             if(currentNode == goalNode) {
