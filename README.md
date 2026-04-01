@@ -19,15 +19,15 @@ That's what A* capability. NextGen starts from here:- The rest of the algorithm 
 
 <p align="center">
   <b>A* Pic:</b><br>
-  <img src="https://github.com/user-attachments/assets/2bcb2541-3d9b-428f-8600-35b860db2844" width="300" alt="PictureA">
+  <img src="https://github.com/user-attachments/assets/2bcb2541-3d9b-428f-8600-35b860db2844" width="600" alt="PictureA">
 </p>
 
 <p align="center">
   <b>NextGen Pic (Searching):</b><br>
-  <img src="https://github.com/user-attachments/assets/1fba415a-085d-49f5-8257-9a4efe87695d" width="300" alt="Searcher">
+  <img src="https://github.com/user-attachments/assets/1fba415a-085d-49f5-8257-9a4efe87695d" width="600" alt="Searcher">
 </p>
 
 <p align="center">
   <b>NextGen Pic (PathFound):</b><br>
-  <img src="https://github.com/user-attachments/assets/717c62a5-9af7-4169-9ac0-7715dfc40063" width="300" alt="Found">
+  <img src="https://github.com/user-attachments/assets/717c62a5-9af7-4169-9ac0-7715dfc40063" width="600" alt="Found">
 </p>
